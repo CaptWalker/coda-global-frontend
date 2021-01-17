@@ -1,0 +1,15 @@
+<h1 class="mat-h1 list" color="primary">Playing 9</h1>
+
+<div *ngIf="selectedUsers.length === 0" class="mat-h2">
+    No Player Selected
+</div>
+
+<mat-card *ngFor="let user of selectedUsers">
+    <mat-card-header>
+        <img mat-card-sm-image src="{{user['Profile Image']}}" alt="">
+        <mat-card-title>{{user.Name}}</mat-card-title>
+        <mat-card-subtitle><div style="padding-right: 1rem;">Bet: {{user.Bet}}</div><div>Price: {{user.Price}}</div> </mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+
+<button *ngIf="selectedUsers.length === 9" mat-flat-button style="width: 100%; margin-top: 1rem;" color="primary" (click)="submit()">START</button>

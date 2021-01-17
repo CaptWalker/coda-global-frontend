@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <h1 class="mat-display-2" color="primary">Winners List</h1>
+
+    <mat-grid-list cols="3" rowHeight="200px">
+        <mat-grid-tile *ngFor="let user of randomPlayers" [colspan]="1" [rowspan]="1" style="margin: .5rem;">
+            
+                <mat-card class="winner" *ngIf="user.Fate === 'Win'" >
+                    <mat-card-header>
+                        <img mat-card-sm-image src="{{user['Profile Image']}}" alt="">
+                        <mat-card-title>{{user.Name}}</mat-card-title>
+                        <mat-card-subtitle><div style="padding-right: 1rem;">Bet: {{user.Bet}}</div><div>Price: {{user.Price}}</div> </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content style="text-align: center; padding: 1rem;">
+                        <mat-card-title>{{user.Fate}}</mat-card-title> 
+                    </mat-card-content>
+                </mat-card> 
+            
+                <mat-card *ngIf="user.Fate === 'Loss'" class="losser">
+                    <mat-card-header>
+                        <img mat-card-sm-image src="{{user['Profile Image']}}" alt="">
+                        <mat-card-title>{{user.Name}}</mat-card-title>
+                        <mat-card-subtitle><div style="padding-right: 1rem;">Bet: {{user.Bet}}</div><div>Price: {{user.Price}}</div> </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content style="text-align: center; padding: 1rem;">
+                        <mat-card-title>{{user.Fate}}</mat-card-title> 
+                    </mat-card-content>
+                </mat-card> 
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>

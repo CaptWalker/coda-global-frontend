@@ -1,0 +1,41 @@
+.container-fluid{
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.mat-card {
+    width: calc(100% - 70px);
+    height: calc(100% - 70px);
+}
+
+img{
+    transition: transform .2s;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.mat-card-header, .mat-card-subtitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mat-card-title{
+    margin-top: 16px;
+}
+
+.mat-card-subtitle{
+    color: rgba($color: #000000, $alpha: .6);
+    font-weight: 700;
+}
+
+.winner{
+   border: solid rgba($color: #13df76, $alpha: 1.0) 1px;
+
+}
+
+.losser{
+   border: solid rgba($color: #df1335, $alpha: 1.0) 1px;
+}
